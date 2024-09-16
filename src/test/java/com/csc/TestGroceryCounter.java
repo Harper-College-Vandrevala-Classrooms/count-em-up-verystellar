@@ -19,14 +19,14 @@ public class TestGroceryCounter {
   @Test
   void testZero() {
     counter.ones();
-    assertEquals("$1.00", counter.getTotal());
+    assertEquals("$1.00", counter.total());
   }
   @Test
   void testOne() {
     for(int i = 0; i < 5; i++){
         counter.tens();
     }
-    assertEquals("$50.00", counter.getTotal());
+    assertEquals("$50.00", counter.total());
   }
 
   @Test
@@ -34,7 +34,7 @@ public class TestGroceryCounter {
     for(int i = 0; i < 10; i++){
         counter.tens();
     }
-    assertEquals("$0.00", counter.getTotal());
+    assertEquals("$0.00", counter.total());
   }
 
   @Test
@@ -42,7 +42,7 @@ public class TestGroceryCounter {
     for(int i = 0; i < 10; i++){
         counter.ones();
     }
-    assertEquals("$10.00", counter.getTotal());
+    assertEquals("$10.00", counter.total());
   }
 
   @Test
@@ -52,7 +52,7 @@ public class TestGroceryCounter {
     }
     int overloads = counter.number_of_overloads();
     assertEquals(2, overloads);
-    assertEquals("$0.00", counter.getTotal());
+    assertEquals("$0.00", counter.total());
   }
   @Test
   void testFive() {
@@ -64,7 +64,7 @@ public class TestGroceryCounter {
     counter.hundredths(); //"should be $11.11 and 2 overloads"
     counter.clear();
     assertEquals(0, counter.number_of_overloads());
-    assertEquals("$0.00", counter.getTotal());
+    assertEquals("$0.00", counter.total());
   }
   @Test
   void testSix() {
@@ -80,6 +80,6 @@ public class TestGroceryCounter {
     for(int i = 0; i < 9; i++){
         counter.tenths();
     }
-    assertEquals("$0.99", counter.getTotal());
+    assertEquals("$0.99", counter.total());
   }
 }

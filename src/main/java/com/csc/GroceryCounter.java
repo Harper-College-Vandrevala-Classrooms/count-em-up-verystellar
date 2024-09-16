@@ -71,7 +71,7 @@ public class GroceryCounter {
     }        
   }
 
-  public String getTotal(){
+  public String total(){
     if(nums[0] == 0){
             String s = "$" + String.valueOf(nums[1]) + 
                 "." + String.valueOf(nums[2]) + String.valueOf(nums[3]);
